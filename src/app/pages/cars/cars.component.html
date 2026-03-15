@@ -1,0 +1,53 @@
+<div class="page-container">
+  <div class="header-section">
+    <h2>Explore our curated selection of high-performance vehicles</h2>
+  </div>
+
+  <div class="cars-grid">
+    @for (car of cars; track car.id) {
+      <div class="shop-card">
+        <div class="image-wrapper">
+          <img [src]="car.imageUrl" [alt]="car.name">
+        </div>
+        
+        <div class="card-body">
+          <h3>{{ car.name }}</h3>
+          
+          <div class="specs-grid">
+            <div class="spec-item">📅 {{ car.year }}</div>
+            <div class="spec-item">⏱️ {{ car.mileage }}</div>
+            <div class="spec-item">⚙️ {{ car.engine }}</div>
+            <div class="spec-item">⚡ {{ car.hp }}</div>
+          </div>
+          
+          <p class="description">{{ car.description }}</p>
+          
+          <div class="price-section">
+            <div class="main-price">${{ getTotalPrice(car) | number }}</div>
+            <div class="price-breakdown">
+              <span>Base: ${{ car.basePrice | number }}</span>
+              <span>Options: +${{ getOptionsTotal(car) | number }}</span>
+            </div>
+          </div>
+
+          <div class="options-section">
+            <h4>AVAILABLE OPTIONS</h4>
+            @for (option of car.options; track option.name) {
+              <label class="option-row">
+                <div class="checkbox-wrapper">
+                  <input type="checkbox" [(ngModel)]="option.selected">
+                  <span>{{ option.name }}</span>
+                </div>
+                <span class="option-price">+${{ option.price | number }}</span>
+              </label>
+            }
+          </div>
+
+          <button class="add-to-cart-btn" (click)="addToCart(car)">
+            🛒 ADD TO CART
+          </button>
+        </div>
+      </div>
+    }
+  </div>
+</div>

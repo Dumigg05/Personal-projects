@@ -1,0 +1,12 @@
+<div class="page-container">
+  <div class="news-grid">
+    @for (article of newsArticles; track article.title) {
+      <app-card
+        [title]="article.title"
+        [imageUrl]="article.imageUrl"
+        [content]="article.content"
+        [showButton]="false" 
+      />
+    }
+  </div>
+</div>

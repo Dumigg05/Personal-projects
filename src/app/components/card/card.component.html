@@ -1,0 +1,24 @@
+<div class="custom-card">
+  @if(title()) {
+    <h3 class="card-title">{{ title() }}</h3>
+  }
+
+  @if(imageUrl()) {
+    <div class="card-image-wrapper">
+      <img [src]="imageUrl()" alt="Card image" class="card-img" />
+    </div>
+  }
+
+  @if(content()) {
+    <p class="card-content">{{ content() }}</p>
+  }
+
+  @if(showButton()) {
+    <app-button 
+      [buttonLabel]="buttonLabel()" 
+      [buttonIcon]="buttonIcon()" 
+      [buttonType]="setButtonType()"
+      (buttonClicked)="onButtonClick()">
+    </app-button>
+  }
+</div>

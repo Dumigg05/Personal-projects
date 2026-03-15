@@ -1,0 +1,124 @@
+.page-container {
+  background-color: #f8f9fa;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+.header-section {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #666;
+}
+
+.cars-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.shop-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-body h3 {
+  font-size: 1.5rem;
+  margin: 0 0 16px 0;
+}
+
+.specs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 16px;
+}
+
+.description {
+  font-size: 0.9rem;
+  color: #777;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+.price-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20px;
+}
+
+.main-price {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #e67e22; /* Culoarea portocalie din design */
+}
+
+.price-breakdown {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  color: #888;
+  text-align: right;
+}
+
+.options-section h4 {
+  font-size: 0.8rem;
+  color: #999;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.option-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.option-price {
+  color: #27ae60; /* Verde pentru prețul extra */
+  font-weight: bold;
+}
+
+.add-to-cart-btn {
+  margin-top: auto; /* Împinge butonul jos */
+  width: 100%;
+  padding: 15px;
+  background-color: #ff8c5a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #ff7033;
+}

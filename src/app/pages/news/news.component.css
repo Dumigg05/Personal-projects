@@ -1,0 +1,15 @@
+.page-container {
+  /* Culoarea de fundal ușor gri din designul tău */
+  background-color: #f4f5f7; 
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+.news-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  /* Creează 3 coloane egale pe desktop */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
